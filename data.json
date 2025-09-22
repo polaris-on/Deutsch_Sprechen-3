@@ -1,0 +1,363 @@
+{
+  "SprechenTeil3": {
+    "1_Begruessung": [
+      { "de": "Hallo!", "uk": "Привіт!" },
+      { "de": "Hi, wie geht’s?", "uk": "Привіт, як справи?" },
+      { "de": "Guten Morgen!", "uk": "Доброго ранку!" },
+      { "de": "Guten Tag!", "uk": "Добрий день!" },
+      { "de": "Guten Abend!", "uk": "Добрий вечір!" },
+      { "de": "Schön, dich zu sehen.", "uk": "Радий тебе бачити." },
+      {
+        "de": "Schön, dass wir zusammen sprechen.",
+        "uk": "Добре, що ми говоримо разом."
+      },
+      { "de": "Wie geht es dir?", "uk": "Як у тебе справи?" },
+      { "de": "Alles klar?", "uk": "Все гаразд?" },
+      { "de": "Lange nicht gesehen!", "uk": "Давно не бачилися!" }
+    ],
+    "2_Gespraech_Beginn": [
+      { "de": "Wollen wir anfangen?", "uk": "Почнемо?" },
+      {
+        "de": "Also, wir sollen etwas planen.",
+        "uk": "Отже, ми маємо щось спланувати."
+      },
+      { "de": "Lass uns darüber sprechen.", "uk": "Давай поговоримо про це." },
+      { "de": "Wir müssen uns einigen.", "uk": "Ми маємо домовитися." },
+      { "de": "Also, unser Thema ist...", "uk": "Отже, наша тема — ..." },
+      {
+        "de": "Wir sollen eine Lösung finden.",
+        "uk": "Ми маємо знайти рішення."
+      },
+      { "de": "Fangen wir an mit...", "uk": "Почнемо з ..." },
+      {
+        "de": "Worüber sprechen wir zuerst?",
+        "uk": "Про що ми спершу поговоримо?"
+      }
+    ],
+    "3_Vorschlag_machen": [
+      {
+        "de": "Ich schlage vor, wir treffen uns",
+        "uk": "Я пропоную зустрітися",
+        "optionsDe": [
+          "am Nachmittag im Park",
+          "bei mir zu Hause",
+          "am Bahnhof"
+        ],
+        "optionsUk": ["після обіду в парку", "у мене вдома", "на вокзалі"]
+      },
+      {
+        "de": "Wie wäre es, wenn wir",
+        "uk": "Як щодо того, щоб ми",
+        "optionsDe": [
+          "am Samstag ins Kino gehen",
+          "morgen telefonieren",
+          "eine Fahrradtour machen"
+        ],
+        "optionsUk": [
+          "у суботу піти в кіно",
+          "завтра зателефонувати",
+          "зробити велопрогулянку"
+        ]
+      },
+      {
+        "de": "Wir könnten",
+        "uk": "Ми могли б",
+        "optionsDe": [
+          "zusammen Hausaufgaben machen",
+          "heute Abend lernen",
+          "den Bus nehmen"
+        ],
+        "optionsUk": [
+          "робити разом домашнє завдання",
+          "вчитися сьогодні ввечері",
+          "поїхати автобусом"
+        ]
+      },
+      {
+        "de": "Es wäre vielleicht besser, wenn wir",
+        "uk": "Можливо, краще, щоб ми",
+        "optionsDe": ["früh losfahren", "uns am Bahnhof treffen"],
+        "optionsUk": ["виїхати рано", "зустрітися на вокзалі"]
+      },
+      {
+        "de": "Sollen wir",
+        "uk": "Може, ми",
+        "optionsDe": ["morgen telefonieren", "am Wochenende einkaufen gehen"],
+        "optionsUk": ["завтра зателефонувати", "піти за покупками на вихідних"]
+      },
+      {
+        "de": "Ich hätte den Vorschlag, dass wir",
+        "uk": "Я маю пропозицію, щоб ми",
+        "optionsDe": ["im Internet nachschauen", "gemeinsam kochen"],
+        "optionsUk": ["подивитися в інтернеті", "приготувати разом їжу"]
+      },
+      {
+        "de": "Am besten wäre es, wenn wir",
+        "uk": "Найкраще було б, якби ми",
+        "optionsDe": ["früh losfahren", "bei dir anfangen"],
+        "optionsUk": ["виїхати рано", "почати у тебе вдома"]
+      },
+      {
+        "de": "Warum machen wir nicht",
+        "uk": "Чому б нам не",
+        "optionsDe": ["eine Pause im Café", "die Aufgaben teilen"],
+        "optionsUk": ["зробити перерву в кафе", "поділити завдання"]
+      }
+    ],
+    "4_Zustimmung": [
+      {
+        "de": "Ja, das finde ich gut.",
+        "uk": "Так, я вважаю це хорошою ідеєю."
+      },
+      { "de": "Ja, das ist eine gute Idee.", "uk": "Так, це гарна ідея." },
+      { "de": "Ja, gern!", "uk": "Так, із задоволенням!" },
+      { "de": "Ja, das passt mir gut.", "uk": "Так, це мені підходить." },
+      { "de": "Ja, ich bin einverstanden.", "uk": "Так, я згоден." },
+      { "de": "Ja, das machen wir so.", "uk": "Так, зробімо так." },
+      { "de": "Ja, warum nicht.", "uk": "Так, чому б і ні." },
+      { "de": "Ja, ich denke auch.", "uk": "Так, я теж так думаю." },
+      { "de": "Ja, das klingt gut.", "uk": "Так, звучить добре." },
+      { "de": "Ja, das ist prima.", "uk": "Так, це чудово." },
+      { "de": "Ja, das gefällt mir.", "uk": "Так, мені це подобається." },
+      { "de": "Genau, das ist richtig.", "uk": "Саме так, це правильно." },
+      { "de": "Ja, das finde ich auch.", "uk": "Так, я теж так вважаю." },
+      { "de": "Super, das machen wir!", "uk": "Чудово, зробімо так!" },
+      {
+        "de": "Ja, damit bin ich einverstanden.",
+        "uk": "Так, я з цим згоден."
+      },
+      { "de": "Ja, ich stimme dir zu.", "uk": "Так, я погоджуюся з тобою." },
+      {
+        "de": "Ja, gute Idee, das passt perfekt.",
+        "uk": "Так, гарна ідея, це ідеально підходить."
+      },
+      { "de": "Einverstanden!", "uk": "Домовилися!" },
+      { "de": "Ja, klar!", "uk": "Так, звичайно!" },
+      { "de": "Ja, so machen wir das.", "uk": "Так, зробимо саме так." },
+      { "de": "Ja, das wäre super.", "uk": "Так, це було б чудово." },
+      { "de": "Ja, sehr gern.", "uk": "Так, із великим задоволенням." },
+      { "de": "Ja, ich habe nichts dagegen.", "uk": "Так, я не заперечую." },
+      {
+        "de": "Das sehe ich genauso.",
+        "uk": "Я бачу це так само (я повністю згоден)."
+      }
+    ],
+    "5_Ablehnung": [
+      {
+        "de": "Nein, das geht leider nicht.",
+        "uk": "Ні, на жаль, це не вийде."
+      },
+      {
+        "de": "Das passt mir nicht so gut.",
+        "uk": "Це мені не дуже підходить."
+      },
+      { "de": "Ich habe da keine Zeit.", "uk": "У мене тоді немає часу." },
+      {
+        "de": "Tut mir leid, aber ich kann nicht.",
+        "uk": "Вибач, але я не можу."
+      },
+      {
+        "de": "Nein, das ist keine gute Idee.",
+        "uk": "Ні, це не дуже хороша ідея."
+      },
+      { "de": "Lieber nicht.", "uk": "Краще ні." },
+      {
+        "de": "Nein, ich möchte etwas anderes machen.",
+        "uk": "Ні, я хотів би зробити щось інше."
+      },
+      {
+        "de": "Ich denke, das ist nicht so gut.",
+        "uk": "Думаю, це не дуже добре."
+      },
+      {
+        "de": "Das gefällt mir nicht so.",
+        "uk": "Це мені не дуже подобається."
+      },
+      {
+        "de": "Nein, das finde ich nicht so interessant.",
+        "uk": "Ні, я не вважаю це таким цікавим."
+      },
+      { "de": "Ich habe schon etwas vor.", "uk": "У мене вже є плани." },
+      {
+        "de": "Das ist für mich zu spät/früh.",
+        "uk": "Це для мене занадто пізно/рано."
+      },
+      { "de": "Nein, ich mag das nicht.", "uk": "Ні, я цього не люблю." },
+      { "de": "Das klappt bei mir nicht.", "uk": "У мене це не вийде." },
+      {
+        "de": "Nein, da habe ich keine Lust.",
+        "uk": "Ні, у мене немає бажання."
+      },
+      {
+        "de": "Ich glaube, das ist keine gute Lösung.",
+        "uk": "Думаю, це не дуже добре рішення."
+      },
+      {
+        "de": "Nein, da bin ich nicht dabei.",
+        "uk": "Ні, я в цьому не беру участі."
+      },
+      {
+        "de": "Ich würde lieber etwas anderes machen.",
+        "uk": "Я б краще зробив щось інше."
+      },
+      {
+        "de": "Das ist mir zu kompliziert.",
+        "uk": "Це для мене занадто складно."
+      },
+      { "de": "Nein, das ist nicht möglich.", "uk": "Ні, це неможливо." },
+      {
+        "de": "Entschuldigung, aber ich sehe das anders.",
+        "uk": "Вибач, але я бачу це інакше."
+      },
+      {
+        "de": "Nein, das passt heute nicht.",
+        "uk": "Ні, сьогодні це не підходить."
+      },
+      {
+        "de": "Das ist keine gute Idee für mich.",
+        "uk": "Це не дуже хороша ідея для мене."
+      },
+      { "de": "Nein, das möchte ich nicht.", "uk": "Ні, я цього не хочу." }
+    ],
+    "6_Zeit_vorschlagen": [
+      { "de": "Wann hast du Zeit?", "uk": "Коли ти маєш час?" },
+      {
+        "de": "Passt es dir",
+        "uk": "Чи підходить тобі",
+        "optionsDe": ["am Montag", "am Nachmittag", "morgen Abend"],
+        "optionsUk": ["у понеділок", "після обіду", "завтра ввечері"]
+      },
+      {
+        "de": "Hast du Zeit",
+        "uk": "Чи маєш ти час",
+        "optionsDe": ["am Nachmittag", "am Wochenende", "vor der Arbeit"],
+        "optionsUk": ["після обіду", "на вихідних", "до роботи"]
+      },
+      {
+        "de": "Sollen wir uns",
+        "uk": "Може, зустрінемось",
+        "optionsDe": [
+          "um 10 Uhr treffen",
+          "am Wochenende treffen",
+          "nächste Woche treffen"
+        ],
+        "optionsUk": ["о 10-й годині", "на вихідних", "наступного тижня"]
+      },
+      {
+        "de": "Am besten wäre es",
+        "uk": "Найкраще було б",
+        "optionsDe": ["am Nachmittag", "am Sonntagvormittag"],
+        "optionsUk": ["після обіду", "вранці у неділю"]
+      },
+      {
+        "de": "Wie wäre es mit",
+        "uk": "Як щодо",
+        "optionsDe": ["morgen früh", "übermorgen"],
+        "optionsUk": ["завтра вранці", "післязавтра"]
+      },
+      {
+        "de": "Ich habe Zeit",
+        "uk": "Я маю час",
+        "optionsDe": ["am Dienstag", "nur am Abend", "am Wochenende"],
+        "optionsUk": ["у вівторок", "тільки ввечері", "на вихідних"]
+      },
+      {
+        "de": "Ich habe leider erst ab 18 Uhr Zeit.",
+        "uk": "На жаль, я маю час тільки з 18-ї години."
+      }
+    ],
+    "7_Weg_Transport": [
+      {
+        "de": "Wollen wir",
+        "uk": "Може, поїдемо",
+        "optionsDe": [
+          "mit dem Bus fahren",
+          "den Zug nehmen",
+          "die Straßenbahn nehmen"
+        ],
+        "optionsUk": ["автобусом", "поїздом", "трамваєм"]
+      },
+      {
+        "de": "Es ist schneller",
+        "uk": "Буде швидше",
+        "optionsDe": ["mit dem Auto", "mit der U-Bahn"],
+        "optionsUk": ["машиною", "метро"]
+      },
+      {
+        "de": "Wir können auch",
+        "uk": "Ми також можемо",
+        "optionsDe": ["zu Fuß gehen", "ein Taxi nehmen"],
+        "optionsUk": ["піти пішки", "взяти таксі"]
+      },
+      {
+        "de": "Mit dem Fahrrad wäre es gesünder.",
+        "uk": "На велосипеді було б корисніше."
+      },
+      { "de": "Mit dem Bus ist es billiger.", "uk": "Автобусом дешевше." },
+      { "de": "Der Bus fährt direkt dahin.", "uk": "Автобус їде прямо туди." },
+      {
+        "de": "Mit dem Zug dauert es ungefähr eine Stunde.",
+        "uk": "Поїздом це займає приблизно годину."
+      },
+      {
+        "de": "Wir könnten Fahrkarten online kaufen.",
+        "uk": "Ми могли б купити квитки онлайн."
+      },
+      {
+        "de": "Der Weg zu Fuß dauert etwa 20 Minuten.",
+        "uk": "Пішки дорога займає близько 20 хвилин."
+      },
+      {
+        "de": "Ich glaube, das Auto ist praktischer.",
+        "uk": "Думаю, машина практичніша."
+      },
+      {
+        "de": "Mit der U-Bahn geht es am einfachsten.",
+        "uk": "Найзручніше їхати метро."
+      },
+      { "de": "Das Taxi ist zu teuer.", "uk": "Таксі занадто дороге." },
+      {
+        "de": "Vielleicht ist es besser, wenn wir laufen.",
+        "uk": "Можливо, краще піти пішки."
+      }
+    ],
+    "8_Verabschiedung": [
+      { "de": "Tschüss!", "uk": "Бувай!" },
+      { "de": "Auf Wiedersehen!", "uk": "До побачення!" },
+      { "de": "Bis bald!", "uk": "До скорої зустрічі!" },
+      { "de": "Bis morgen!", "uk": "До завтра!" },
+      { "de": "Bis später!", "uk": "До пізніше!" },
+      { "de": "Mach’s gut!", "uk": "Щасти!" },
+      { "de": "Schönen Tag noch!", "uk": "Гарного дня!" },
+      { "de": "Schönen Abend noch!", "uk": "Гарного вечора!" },
+      { "de": "Gute Nacht!", "uk": "Надобраніч!" },
+      { "de": "Wir sehen uns am Samstag.", "uk": "Побачимось у суботу." },
+      { "de": "Wir telefonieren noch.", "uk": "Ще зателефонуємо один одному." },
+      { "de": "Dann bis nächste Woche!", "uk": "Тоді до наступного тижня!" },
+      { "de": "Viel Erfolg!", "uk": "Успіхів!" },
+      { "de": "Viel Spaß!", "uk": "Гарно повеселися!" },
+      { "de": "Pass auf dich auf!", "uk": "Бережи себе!" },
+      { "de": "Danke, gleichfalls!", "uk": "Дякую, навзаєм!" },
+      {
+        "de": "Grüß deine Familie von mir!",
+        "uk": "Передавай привіт своїй родині!"
+      },
+      {
+        "de": "Es war schön, mit dir zu sprechen.",
+        "uk": "Було приємно з тобою поговорити."
+      },
+      { "de": "Wir schreiben uns.", "uk": "Напишемо один одному." },
+      { "de": "Alles Gute!", "uk": "Усього найкращого!" },
+      { "de": "Bis zum nächsten Mal!", "uk": "До наступного разу!" },
+      {
+        "de": "Ich freue mich auf unser Treffen.",
+        "uk": "Чекаю на нашу зустріч."
+      },
+      {
+        "de": "Tschüss, mach’s gut und bleib gesund!",
+        "uk": "Бувай, щасти й будь здоровий!"
+      },
+      { "de": "Wir sehen uns bald wieder.", "uk": "Скоро знову побачимось." }
+    ]
+  }
+}
