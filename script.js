@@ -45,8 +45,7 @@ class TranslationApp {
         targetLabel: "Zielsprache",
         sectionComplete: "Abschnitt abgeschlossen",
         nextSection: "Nächster Abschnitt",
-        sectionCompleteMessage:
-          'Abschnitt abgeschlossen. Klicken Sie auf "Weiter", um zum nächsten Abschnitt zu gelangen.',
+        sectionCompleteMessage: "Drück den Knopf!",
       },
       uk: {
         title: "Поширені фрази для діалогу",
@@ -245,6 +244,15 @@ class TranslationApp {
       newCard.classList.add("appear");
     }
 
+    // Додаємо обробник для кнопки озвучення (тільки для німецької)
+    const speakBtn = this.elements.cardsContainer.querySelector(".speak-btn");
+    if (speakBtn) {
+      speakBtn.addEventListener("click", () => {
+        const phrase = speakBtn.getAttribute("data-phrase");
+        this.speakGerman(phrase);
+      });
+    }
+
     // Оновлюємо стан кнопок
     this.updateButtonStates();
   }
@@ -311,11 +319,29 @@ class TranslationApp {
     const mainPhrase = card[this.sourceLang];
     const mainLabel = this.getLanguageDisplayName(this.sourceLang);
 
+    // Кнопка озвучення для німецької фрази (незалежно від sourceLang)
+    let speakBtn = "";
+    if (card.de) {
+      speakBtn = `
+        <button class="speak-btn" type="button" data-phrase="${card.de}" title="Text abspielen">
+          <span class="speak-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M4 9v6h4l5 5V4l-5 5H4z" fill="currentColor"/>
+              <path d="M16.5 12c0-1.77-.77-3.29-2-4.29v8.58c1.23-1 2-2.52 2-4.29z" fill="currentColor"/>
+            </svg>
+          </span>
+        </button>
+      `;
+    }
+
     return `
-      <div class="card">
-        <div class="main-phrase lang-${this.sourceLang}">
+      <div class="card" style="position:relative;">
+        <div class="main-phrase lang-${
+          this.sourceLang
+        }" style="position:relative;">
           <div class="phrase-label">${mainLabel}</div>
           <div class="phrase-text">${mainPhrase || ""}</div>
+          ${speakBtn}
         </div>
       </div>
     `;
@@ -659,6 +685,20 @@ class TranslationApp {
     if (errorText) {
       errorText.textContent = message;
     }
+  }
+
+  /**
+   * Озвучення німецької фрази
+   */
+  speakGerman(text) {
+    if (!window.speechSynthesis || !text) return;
+    const utter = new window.SpeechSynthesisUtterance(text);
+    utter.lang = "de-DE";
+    // Вибір голосу (якщо доступний)
+    const voices = window.speechSynthesis.getVoices();
+    const germanVoice = voices.find((v) => v.lang.startsWith("de"));
+    if (germanVoice) utter.voice = germanVoice;
+    window.speechSynthesis.speak(utter);
   }
 }
 
