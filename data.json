@@ -1,53 +1,136 @@
 {
   "SprechenTeil3": {
     "1_Begruessung": [
-      { "de": "Hallo!", "uk": "Привіт!" },
-      { "de": "Hi, wie geht’s?", "uk": "Привіт, як справи?" },
-      { "de": "Guten Morgen!", "uk": "Доброго ранку!" },
-      { "de": "Guten Tag!", "uk": "Добрий день!" },
-      { "de": "Guten Abend!", "uk": "Добрий вечір!" },
-      { "de": "Schön, dich zu sehen.", "uk": "Радий тебе бачити." },
+      { "de": "Hallo!", "uk": "Привіт!", "ar": "مرحبا!", "tr": "Merhaba!" },
+      {
+        "de": "Hi, wie geht’s?",
+        "uk": "Привіт, як справи?",
+        "ar": "مرحباً، كيف حالك؟",
+        "tr": "Selam, nasılsın?"
+      },
+      {
+        "de": "Guten Morgen!",
+        "uk": "Доброго ранку!",
+        "ar": "صباح الخير!",
+        "tr": "Günaydın!"
+      },
+      {
+        "de": "Guten Tag!",
+        "uk": "Добрий день!",
+        "ar": "نهارك سعيد!",
+        "tr": "İyi günler!"
+      },
+      {
+        "de": "Guten Abend!",
+        "uk": "Добрий вечір!",
+        "ar": "مساء الخير!",
+        "tr": "İyi akşamlar!"
+      },
+      {
+        "de": "Schön, dich zu sehen.",
+        "uk": "Радий тебе бачити.",
+        "ar": "سعيد برؤيتك.",
+        "tr": "Seni görmek güzel."
+      },
       {
         "de": "Schön, dass wir zusammen sprechen.",
-        "uk": "Добре, що ми говоримо разом."
+        "uk": "Добре, що ми говоримо разом.",
+        "ar": "سعيد بأننا نتحدث معاً.",
+        "tr": "Birlikte konuşmamız güzel."
       },
-      { "de": "Wie geht es dir?", "uk": "Як у тебе справи?" },
-      { "de": "Alles klar?", "uk": "Все гаразд?" },
-      { "de": "Lange nicht gesehen!", "uk": "Давно не бачилися!" }
+      {
+        "de": "Wie geht es dir?",
+        "uk": "Як у тебе справи?",
+        "ar": "كيف حالك؟",
+        "tr": "Nasılsın?"
+      },
+      {
+        "de": "Alles klar?",
+        "uk": "Все гаразд?",
+        "ar": "هل كل شيء على ما يرام؟",
+        "tr": "Her şey yolunda mı?"
+      },
+      {
+        "de": "Lange nicht gesehen!",
+        "uk": "Давно не бачилися!",
+        "ar": "لم أرك منذ زمن طويل!",
+        "tr": "Uzun zamandır görüşmedik!"
+      }
     ],
     "2_Gespraech_Beginn": [
-      { "de": "Wollen wir anfangen?", "uk": "Почнемо?" },
+      {
+        "de": "Wollen wir anfangen?",
+        "uk": "Почнемо?",
+        "ar": "هل نبدأ؟",
+        "tr": "Başlayalım mı?"
+      },
       {
         "de": "Also, wir sollen etwas planen.",
-        "uk": "Отже, ми маємо щось спланувати."
+        "uk": "Отже, ми маємо щось спланувати.",
+        "ar": "إذاً، يجب أن نخطط لشيء ما.",
+        "tr": "Yani, bir şey planlamamız gerekiyor."
       },
-      { "de": "Lass uns darüber sprechen.", "uk": "Давай поговоримо про це." },
-      { "de": "Wir müssen uns einigen.", "uk": "Ми маємо домовитися." },
-      { "de": "Also, unser Thema ist...", "uk": "Отже, наша тема — ..." },
+      {
+        "de": "Lass uns darüber sprechen.",
+        "uk": "Давай поговоримо про це.",
+        "ar": "دعنا نتحدث عن ذلك.",
+        "tr": "Hadi bunun hakkında konuşalım."
+      },
+      {
+        "de": "Wir müssen uns einigen.",
+        "uk": "Ми маємо домовитися.",
+        "ar": "يجب أن نتفق.",
+        "tr": "Anlaşmamız gerekiyor."
+      },
+      {
+        "de": "Also, unser Thema ist...",
+        "uk": "Отже, наша тема — ...",
+        "ar": "إذاً، موضوعنا هو...",
+        "tr": "Yani, konumuz..."
+      },
       {
         "de": "Wir sollen eine Lösung finden.",
-        "uk": "Ми маємо знайти рішення."
+        "uk": "Ми маємо знайти рішення.",
+        "ar": "يجب أن نجد حلاً.",
+        "tr": "Bir çözüm bulmamız gerekiyor."
       },
-      { "de": "Fangen wir an mit...", "uk": "Почнемо з ..." },
+      {
+        "de": "Fangen wir an mit...",
+        "uk": "Почнемо з ...",
+        "ar": "لنبدأ بـ...",
+        "tr": "...ile başlayalım."
+      },
       {
         "de": "Worüber sprechen wir zuerst?",
-        "uk": "Про що ми спершу поговоримо?"
+        "uk": "Про що ми спершу поговоримо?",
+        "ar": "عن ماذا سنتحدث أولاً؟",
+        "tr": "Önce ne hakkında konuşacağız?"
       }
     ],
     "3_Vorschlag_machen": [
       {
         "de": "Ich schlage vor, wir treffen uns",
         "uk": "Я пропоную зустрітися",
+        "ar": "أقترح أن نلتقي",
+        "tr": "Buluşmayı öneriyorum",
         "optionsDe": [
           "am Nachmittag im Park",
           "bei mir zu Hause",
           "am Bahnhof"
         ],
-        "optionsUk": ["після обіду в парку", "у мене вдома", "на вокзалі"]
+        "optionsUk": ["після обіду в парку", "у мене вдома", "на вокзалі"],
+        "optionsAr": ["بعد الظهر في الحديقة", "في منزلي", "في محطة القطار"],
+        "optionsTr": [
+          "Öğleden sonra parkta",
+          "Benim evimde",
+          "Tren istasyonunda"
+        ]
       },
       {
         "de": "Wie wäre es, wenn wir",
         "uk": "Як щодо того, щоб ми",
+        "ar": "ما رأيك لو أننا...",
+        "tr": "Ne dersin, eğer biz...",
         "optionsDe": [
           "am Samstag ins Kino gehen",
           "morgen telefonieren",
@@ -57,11 +140,23 @@
           "у суботу піти в кіно",
           "завтра зателефонувати",
           "зробити велопрогулянку"
+        ],
+        "optionsAr": [
+          "نذهب إلى السينما يوم السبت",
+          "نتصل غداً",
+          "نقوم بجولة بالدراجة"
+        ],
+        "optionsTr": [
+          "Cumartesi sinemaya gitmek",
+          "Yarın telefonlaşmak",
+          "Bisiklet turu yapmak"
         ]
       },
       {
         "de": "Wir könnten",
         "uk": "Ми могли б",
+        "ar": "يمكننا أن...",
+        "tr": "Yapabiliriz...",
         "optionsDe": [
           "zusammen Hausaufgaben machen",
           "heute Abend lernen",
@@ -71,293 +166,688 @@
           "робити разом домашнє завдання",
           "вчитися сьогодні ввечері",
           "поїхати автобусом"
+        ],
+        "optionsAr": [
+          "نقوم بالواجبات المنزلية معاً",
+          "ندرس هذا المساء",
+          "نأخذ الحافلة"
+        ],
+        "optionsTr": [
+          "Birlikte ödev yapmak",
+          "Bu akşam ders çalışmak",
+          "Otobüse binmek"
         ]
       },
       {
         "de": "Es wäre vielleicht besser, wenn wir",
         "uk": "Можливо, краще, щоб ми",
+        "ar": "ربما يكون من الأفضل لو أننا...",
+        "tr": "Belki daha iyi olur, eğer biz...",
         "optionsDe": ["früh losfahren", "uns am Bahnhof treffen"],
-        "optionsUk": ["виїхати рано", "зустрітися на вокзалі"]
+        "optionsUk": ["виїхати рано", "зустрітися на вокзалі"],
+        "optionsAr": ["نغادر مبكراً", "نلتقي في محطة القطار"],
+        "optionsTr": ["Erken yola çıkmak", "Tren istasyonunda buluşmak"]
       },
       {
         "de": "Sollen wir",
         "uk": "Може, ми",
+        "ar": "هل ينبغي لنا أن...",
+        "tr": "Yapmalı mıyız...",
         "optionsDe": ["morgen telefonieren", "am Wochenende einkaufen gehen"],
-        "optionsUk": ["завтра зателефонувати", "піти за покупками на вихідних"]
+        "optionsUk": ["завтра зателефонувати", "піти за покупками на вихідних"],
+        "optionsAr": ["نتصل غداً", "نذهب للتسوق في عطلة نهاية الأسبوع"],
+        "optionsTr": ["Yarın telefonlaşmak", "Hafta sonu alışverişe gitmek"]
       },
       {
         "de": "Ich hätte den Vorschlag, dass wir",
         "uk": "Я маю пропозицію, щоб ми",
+        "ar": "لدي اقتراح أن...",
+        "tr": "Bir önerim var, ...",
         "optionsDe": ["im Internet nachschauen", "gemeinsam kochen"],
-        "optionsUk": ["подивитися в інтернеті", "приготувати разом їжу"]
+        "optionsUk": ["подивитися в інтернеті", "приготувати разом їжу"],
+        "optionsAr": ["نبحث في الإنترنت", "نطبخ معاً"],
+        "optionsTr": ["İnternetten bakmak", "Birlikte yemek yapmak"]
       },
       {
         "de": "Am besten wäre es, wenn wir",
         "uk": "Найкраще було б, якби ми",
+        "ar": "الأفضل أن...",
+        "tr": "En iyisi, eğer biz...",
         "optionsDe": ["früh losfahren", "bei dir anfangen"],
-        "optionsUk": ["виїхати рано", "почати у тебе вдома"]
+        "optionsUk": ["виїхати рано", "почати у тебе вдома"],
+        "optionsAr": ["نغادر مبكراً", "نبدأ في منزلك"],
+        "optionsTr": ["Erken yola çıkmak", "Senin evinde başlamak"]
       },
       {
         "de": "Warum machen wir nicht",
         "uk": "Чому б нам не",
+        "ar": "لماذا لا نقوم بـ...",
+        "tr": "Neden yapmıyoruz...",
         "optionsDe": ["eine Pause im Café", "die Aufgaben teilen"],
-        "optionsUk": ["зробити перерву в кафе", "поділити завдання"]
+        "optionsUk": ["зробити перерву в кафе", "поділити завдання"],
+        "optionsAr": ["نأخذ استراحة في المقهى", "نقسم المهام"],
+        "optionsTr": ["Kafede mola vermek", "Görevleri paylaşmak"]
       }
     ],
     "4_Zustimmung": [
       {
         "de": "Ja, das finde ich gut.",
-        "uk": "Так, я вважаю це хорошою ідеєю."
+        "uk": "Так, я вважаю це хорошою ідеєю.",
+        "ar": "نعم، أعتقد أن هذا جيد.",
+        "tr": "Evet, bence bu iyi."
       },
-      { "de": "Ja, das ist eine gute Idee.", "uk": "Так, це гарна ідея." },
-      { "de": "Ja, gern!", "uk": "Так, із задоволенням!" },
-      { "de": "Ja, das passt mir gut.", "uk": "Так, це мені підходить." },
-      { "de": "Ja, ich bin einverstanden.", "uk": "Так, я згоден." },
-      { "de": "Ja, das machen wir so.", "uk": "Так, зробімо так." },
-      { "de": "Ja, warum nicht.", "uk": "Так, чому б і ні." },
-      { "de": "Ja, ich denke auch.", "uk": "Так, я теж так думаю." },
-      { "de": "Ja, das klingt gut.", "uk": "Так, звучить добре." },
-      { "de": "Ja, das ist prima.", "uk": "Так, це чудово." },
-      { "de": "Ja, das gefällt mir.", "uk": "Так, мені це подобається." },
-      { "de": "Genau, das ist richtig.", "uk": "Саме так, це правильно." },
-      { "de": "Ja, das finde ich auch.", "uk": "Так, я теж так вважаю." },
-      { "de": "Super, das machen wir!", "uk": "Чудово, зробімо так!" },
+      {
+        "de": "Ja, das ist eine gute Idee.",
+        "uk": "Так, це гарна ідея.",
+        "ar": "نعم، هذه فكرة جيدة.",
+        "tr": "Evet, bu iyi bir fikir."
+      },
+      {
+        "de": "Ja, gern!",
+        "uk": "Так, із задоволенням!",
+        "ar": "نعم، بكل سرور!",
+        "tr": "Evet, memnuniyetle!"
+      },
+      {
+        "de": "Ja, das passt mir gut.",
+        "uk": "Так, це мені підходить.",
+        "ar": "نعم، هذا يناسبني.",
+        "tr": "Evet, bu bana uygun."
+      },
+      {
+        "de": "Ja, ich bin einverstanden.",
+        "uk": "Так, я згоден.",
+        "ar": "نعم، أنا موافق.",
+        "tr": "Evet, kabul ediyorum."
+      },
+      {
+        "de": "Ja, das machen wir so.",
+        "uk": "Так, зробімо так.",
+        "ar": "نعم، لنفعل ذلك هكذا.",
+        "tr": "Evet, öyle yapalım."
+      },
+      {
+        "de": "Ja, warum nicht.",
+        "uk": "Так, чому б і ні.",
+        "ar": "نعم، ولم لا.",
+        "tr": "Evet, neden olmasın."
+      },
+      {
+        "de": "Ja, ich denke auch.",
+        "uk": "Так, я теж так думаю.",
+        "ar": "نعم، أعتقد ذلك أيضاً.",
+        "tr": "Evet, ben de öyle düşünüyorum."
+      },
+      {
+        "de": "Ja, das klingt gut.",
+        "uk": "Так, звучить добре.",
+        "ar": "نعم، يبدو جيداً.",
+        "tr": "Evet, kulağa hoş geliyor."
+      },
+      {
+        "de": "Ja, das ist prima.",
+        "uk": "Так, це чудово.",
+        "ar": "نعم، هذا رائع.",
+        "tr": "Evet, harika."
+      },
+      {
+        "de": "Ja, das gefällt mir.",
+        "uk": "Так, мені це подобається.",
+        "ar": "نعم، يعجبني ذلك.",
+        "tr": "Evet, hoşuma gitti."
+      },
+      {
+        "de": "Genau, das ist richtig.",
+        "uk": "Саме так, це правильно.",
+        "ar": "بالضبط، هذا صحيح.",
+        "tr": "Aynen, bu doğru."
+      },
+      {
+        "de": "Ja, das finde ich auch.",
+        "uk": "Так, я теж так вважаю.",
+        "ar": "نعم، أعتقد ذلك أيضاً.",
+        "tr": "Evet, ben de öyle düşünüyorum."
+      },
+      {
+        "de": "Super, das machen wir!",
+        "uk": "Чудово, зробімо так!",
+        "ar": "رائع، لنفعل ذلك!",
+        "tr": "Harika, öyle yapalım!"
+      },
       {
         "de": "Ja, damit bin ich einverstanden.",
-        "uk": "Так, я з цим згоден."
+        "uk": "Так, я з цим згоден.",
+        "ar": "نعم، أنا موافق على ذلك.",
+        "tr": "Evet, buna katılıyorum."
       },
-      { "de": "Ja, ich stimme dir zu.", "uk": "Так, я погоджуюся з тобою." },
+      {
+        "de": "Ja, ich stimme dir zu.",
+        "uk": "Так, я погоджуюся з тобою.",
+        "ar": "نعم، أوافقك الرأي.",
+        "tr": "Evet, sana katılıyorum."
+      },
       {
         "de": "Ja, gute Idee, das passt perfekt.",
-        "uk": "Так, гарна ідея, це ідеально підходить."
+        "uk": "Так, гарна ідея, це ідеально підходить.",
+        "ar": "نعم، فكرة جيدة، هذا مناسب تماماً.",
+        "tr": "Evet, iyi fikir, bu mükemmel uyuyor."
       },
-      { "de": "Einverstanden!", "uk": "Домовилися!" },
-      { "de": "Ja, klar!", "uk": "Так, звичайно!" },
-      { "de": "Ja, so machen wir das.", "uk": "Так, зробимо саме так." },
-      { "de": "Ja, das wäre super.", "uk": "Так, це було б чудово." },
-      { "de": "Ja, sehr gern.", "uk": "Так, із великим задоволенням." },
-      { "de": "Ja, ich habe nichts dagegen.", "uk": "Так, я не заперечую." },
+      {
+        "de": "Einverstanden!",
+        "uk": "Домовилися!",
+        "ar": "اتفقنا!",
+        "tr": "Anlaştık!"
+      },
+      {
+        "de": "Ja, klar!",
+        "uk": "Так, звичайно!",
+        "ar": "نعم، بالطبع!",
+        "tr": "Evet, tabii!"
+      },
+      {
+        "de": "Ja, so machen wir das.",
+        "uk": "Так, зробимо саме так.",
+        "ar": "نعم، سنفعل ذلك هكذا.",
+        "tr": "Evet, öyle yapacağız."
+      },
+      {
+        "de": "Ja, das wäre super.",
+        "uk": "Так, це було б чудово.",
+        "ar": "نعم، سيكون ذلك رائعاً.",
+        "tr": "Evet, harika olurdu."
+      },
+      {
+        "de": "Ja, sehr gern.",
+        "uk": "Так, із великим задоволенням.",
+        "ar": "نعم، بكل سرور.",
+        "tr": "Evet, çok memnuniyetle."
+      },
+      {
+        "de": "Ja, ich habe nichts dagegen.",
+        "uk": "Так, я не заперечую.",
+        "ar": "نعم، ليس لدي مانع.",
+        "tr": "Evet, benim için sorun yok."
+      },
       {
         "de": "Das sehe ich genauso.",
-        "uk": "Я бачу це так само (я повністю згоден)."
+        "uk": "Я бачу це так само (я повністю згоден).",
+        "ar": "أرى ذلك بنفس الطريقة (أنا موافق تماماً).",
+        "tr": "Ben de aynı şekilde görüyorum (tamamen katılıyorum)."
       }
     ],
     "5_Ablehnung": [
       {
         "de": "Nein, das geht leider nicht.",
-        "uk": "Ні, на жаль, це не вийде."
+        "uk": "Ні, на жаль, це не вийде.",
+        "ar": "لا، للأسف هذا غير ممكن.",
+        "tr": "Hayır, maalesef mümkün değil."
       },
       {
         "de": "Das passt mir nicht so gut.",
-        "uk": "Це мені не дуже підходить."
+        "uk": "Це мені не дуже підходить.",
+        "ar": "هذا لا يناسبني كثيراً.",
+        "tr": "Bu bana pek uymuyor."
       },
-      { "de": "Ich habe da keine Zeit.", "uk": "У мене тоді немає часу." },
+      {
+        "de": "Ich habe da keine Zeit.",
+        "uk": "У мене тоді немає часу.",
+        "ar": "ليس لدي وقت حينها.",
+        "tr": "O zaman vaktim yok."
+      },
       {
         "de": "Tut mir leid, aber ich kann nicht.",
-        "uk": "Вибач, але я не можу."
+        "uk": "Вибач, але я не можу.",
+        "ar": "آسف، لا أستطيع.",
+        "tr": "Üzgünüm, ama yapamam."
       },
       {
         "de": "Nein, das ist keine gute Idee.",
-        "uk": "Ні, це не дуже хороша ідея."
+        "uk": "Ні, це не дуже хороша ідея.",
+        "ar": "لا، ليست فكرة جيدة.",
+        "tr": "Hayır, bu iyi bir fikir değil."
       },
-      { "de": "Lieber nicht.", "uk": "Краще ні." },
+      {
+        "de": "Lieber nicht.",
+        "uk": "Краще ні.",
+        "ar": "يفضل ألا.",
+        "tr": "Tercihen hayır."
+      },
       {
         "de": "Nein, ich möchte etwas anderes machen.",
-        "uk": "Ні, я хотів би зробити щось інше."
+        "uk": "Ні, я хотів би зробити щось інше.",
+        "ar": "لا، أود أن أفعل شيئاً آخر.",
+        "tr": "Hayır, başka bir şey yapmak istiyorum."
       },
       {
         "de": "Ich denke, das ist nicht so gut.",
-        "uk": "Думаю, це не дуже добре."
+        "uk": "Думаю, це не дуже добре.",
+        "ar": "أعتقد أن هذا ليس جيداً جداً.",
+        "tr": "Bence bu pek iyi değil."
       },
       {
         "de": "Das gefällt mir nicht so.",
-        "uk": "Це мені не дуже подобається."
+        "uk": "Це мені не дуже подобається.",
+        "ar": "لا يعجبني ذلك كثيراً.",
+        "tr": "Bundan pek hoşlanmadım."
       },
       {
         "de": "Nein, das finde ich nicht so interessant.",
-        "uk": "Ні, я не вважаю це таким цікавим."
+        "uk": "Ні, я не вважаю це таким цікавим.",
+        "ar": "لا، لا أجد ذلك مثيراً للاهتمام.",
+        "tr": "Hayır, bunu pek ilginç bulmuyorum."
       },
-      { "de": "Ich habe schon etwas vor.", "uk": "У мене вже є плани." },
+      {
+        "de": "Ich habe schon etwas vor.",
+        "uk": "У мене вже є плани.",
+        "ar": "لدي خطط مسبقاً.",
+        "tr": "Zaten bir planım var."
+      },
       {
         "de": "Das ist für mich zu spät/früh.",
-        "uk": "Це для мене занадто пізно/рано."
+        "uk": "Це для мене занадто пізно/рано.",
+        "ar": "هذا مبكر/متأخر جداً بالنسبة لي.",
+        "tr": "Bu benim için çok erken/geç."
       },
-      { "de": "Nein, ich mag das nicht.", "uk": "Ні, я цього не люблю." },
-      { "de": "Das klappt bei mir nicht.", "uk": "У мене це не вийде." },
+      {
+        "de": "Nein, ich mag das nicht.",
+        "uk": "Ні, я цього не люблю.",
+        "ar": "لا، لا أحب ذلك.",
+        "tr": "Hayır, bunu sevmiyorum."
+      },
+      {
+        "de": "Das klappt bei mir nicht.",
+        "uk": "У мене це не вийде.",
+        "ar": "لن ينجح ذلك معي.",
+        "tr": "Bende işe yaramaz."
+      },
       {
         "de": "Nein, da habe ich keine Lust.",
-        "uk": "Ні, у мене немає бажання."
+        "uk": "Ні, у мене немає бажання.",
+        "ar": "لا، ليس لدي رغبة بذلك.",
+        "tr": "Hayır, isteğim yok."
       },
       {
         "de": "Ich glaube, das ist keine gute Lösung.",
-        "uk": "Думаю, це не дуже добре рішення."
+        "uk": "Думаю, це не дуже добре рішення.",
+        "ar": "أعتقد أن هذا ليس حلاً جيداً.",
+        "tr": "Bence bu iyi bir çözüm değil."
       },
       {
         "de": "Nein, da bin ich nicht dabei.",
-        "uk": "Ні, я в цьому не беру участі."
+        "uk": "Ні, я в цьому не беру участі.",
+        "ar": "لا، لن أشارك في ذلك.",
+        "tr": "Hayır, ben katılmıyorum."
       },
       {
         "de": "Ich würde lieber etwas anderes machen.",
-        "uk": "Я б краще зробив щось інше."
+        "uk": "Я б краще зробив щось інше.",
+        "ar": "أفضل أن أفعل شيئاً آخر.",
+        "tr": "Başka bir şey yapmayı tercih ederim."
       },
       {
         "de": "Das ist mir zu kompliziert.",
-        "uk": "Це для мене занадто складно."
+        "uk": "Це для мене занадто складно.",
+        "ar": "هذا معقد جداً بالنسبة لي.",
+        "tr": "Bu benim için çok karmaşık."
       },
-      { "de": "Nein, das ist nicht möglich.", "uk": "Ні, це неможливо." },
+      {
+        "de": "Nein, das ist nicht möglich.",
+        "uk": "Ні, це неможливо.",
+        "ar": "لا، هذا غير ممكن.",
+        "tr": "Hayır, bu mümkün değil."
+      },
       {
         "de": "Entschuldigung, aber ich sehe das anders.",
-        "uk": "Вибач, але я бачу це інакше."
+        "uk": "Вибач, але я бачу це інакше.",
+        "ar": "عذراً، لكنني أرى الأمر بشكل مختلف.",
+        "tr": "Üzgünüm, ama farklı düşünüyorum."
       },
       {
         "de": "Nein, das passt heute nicht.",
-        "uk": "Ні, сьогодні це не підходить."
+        "uk": "Ні, сьогодні це не підходить.",
+        "ar": "لا، هذا لا يناسب اليوم.",
+        "tr": "Hayır, bugün uygun değil."
       },
       {
         "de": "Das ist keine gute Idee für mich.",
-        "uk": "Це не дуже хороша ідея для мене."
+        "uk": "Це не дуже хороша ідея для мене.",
+        "ar": "هذه ليست فكرة جيدة بالنسبة لي.",
+        "tr": "Bu benim için iyi bir fikir değil."
       },
-      { "de": "Nein, das möchte ich nicht.", "uk": "Ні, я цього не хочу." }
+      {
+        "de": "Nein, das möchte ich nicht.",
+        "uk": "Ні, я цього не хочу.",
+        "ar": "لا، لا أريد ذلك.",
+        "tr": "Hayır, istemiyorum."
+      }
     ],
     "6_Zeit_vorschlagen": [
-      { "de": "Wann hast du Zeit?", "uk": "Коли ти маєш час?" },
+      {
+        "de": "Wann hast du Zeit?",
+        "uk": "Коли ти маєш час?",
+        "ar": "متى لديك وقت؟",
+        "tr": "Ne zaman vaktin var?"
+      },
       {
         "de": "Passt es dir",
         "uk": "Чи підходить тобі",
+        "ar": "هل يناسبك...",
+        "tr": "Uygun mu...",
         "optionsDe": ["am Montag", "am Nachmittag", "morgen Abend"],
-        "optionsUk": ["у понеділок", "після обіду", "завтра ввечері"]
+        "optionsUk": ["у понеділок", "після обіду", "завтра ввечері"],
+        "optionsAr": ["يوم الاثنين", "بعد الظهر", "مساء الغد"],
+        "optionsTr": ["Pazartesi", "Öğleden sonra", "Yarın akşam"]
       },
       {
         "de": "Hast du Zeit",
         "uk": "Чи маєш ти час",
+        "ar": "هل لديك وقت...",
+        "tr": "Vaktin var mı...",
         "optionsDe": ["am Nachmittag", "am Wochenende", "vor der Arbeit"],
-        "optionsUk": ["після обіду", "на вихідних", "до роботи"]
+        "optionsUk": ["після обіду", "на вихідних", "до роботи"],
+        "optionsAr": ["بعد الظهر", "في عطلة نهاية الأسبوع", "قبل العمل"],
+        "optionsTr": ["Öğleden sonra", "Hafta sonu", "İşten önce"]
       },
       {
         "de": "Sollen wir uns",
         "uk": "Може, зустрінемось",
+        "ar": "هل نلتقي...",
+        "tr": "Buluşalım mı...",
         "optionsDe": [
           "um 10 Uhr treffen",
           "am Wochenende treffen",
           "nächste Woche treffen"
         ],
-        "optionsUk": ["о 10-й годині", "на вихідних", "наступного тижня"]
+        "optionsUk": ["о 10-й годині", "на вихідних", "наступного тижня"],
+        "optionsAr": [
+          "نلتقي الساعة 10",
+          "نلتقي في عطلة نهاية الأسبوع",
+          "نلتقي الأسبوع القادم"
+        ],
+        "optionsTr": [
+          "Saat 10'da buluşmak",
+          "Hafta sonu buluşmak",
+          "Gelecek hafta buluşmak"
+        ]
       },
       {
         "de": "Am besten wäre es",
         "uk": "Найкраще було б",
+        "ar": "الأفضل أن...",
+        "tr": "En iyisi...",
         "optionsDe": ["am Nachmittag", "am Sonntagvormittag"],
-        "optionsUk": ["після обіду", "вранці у неділю"]
+        "optionsUk": ["після обіду", "вранці у неділю"],
+        "optionsAr": ["بعد الظهر", "صباح الأحد"],
+        "optionsTr": ["Öğleden sonra", "Pazar sabahı"]
       },
       {
         "de": "Wie wäre es mit",
         "uk": "Як щодо",
+        "ar": "ما رأيك بـ...",
+        "tr": "Ne dersin...",
         "optionsDe": ["morgen früh", "übermorgen"],
-        "optionsUk": ["завтра вранці", "післязавтра"]
+        "optionsUk": ["завтра вранці", "післязавтра"],
+        "optionsAr": ["غداً صباحاً", "بعد غد"],
+        "optionsTr": ["Yarın sabah", "Öbür gün"]
       },
       {
         "de": "Ich habe Zeit",
         "uk": "Я маю час",
+        "ar": "لدي وقت...",
+        "tr": "Vaktim var...",
         "optionsDe": ["am Dienstag", "nur am Abend", "am Wochenende"],
-        "optionsUk": ["у вівторок", "тільки ввечері", "на вихідних"]
+        "optionsUk": ["у вівторок", "тільки ввечері", "на вихідних"],
+        "optionsAr": ["يوم الثلاثاء", "فقط في المساء", "في عطلة نهاية الأسبوع"],
+        "optionsTr": ["Salı günü", "Sadece akşam", "Hafta sonu"]
       },
       {
         "de": "Ich habe leider erst ab 18 Uhr Zeit.",
-        "uk": "На жаль, я маю час тільки з 18-ї години."
+        "uk": "На жаль, я маю час тільки з 18-ї години.",
+        "ar": "للأسف، لدي وقت فقط بعد الساعة 18.",
+        "tr": "Maalesef sadece 18'den sonra vaktim var."
       }
     ],
     "7_Weg_Transport": [
       {
         "de": "Wollen wir",
         "uk": "Може, поїдемо",
+        "ar": "هل نذهب...",
+        "tr": "Gidelim mi...",
         "optionsDe": [
           "mit dem Bus fahren",
           "den Zug nehmen",
           "die Straßenbahn nehmen"
         ],
-        "optionsUk": ["автобусом", "поїздом", "трамваєм"]
+        "optionsUk": ["автобусом", "поїздом", "трамваєм"],
+        "optionsAr": ["بالحافلة", "بالقطار", "بالترام"],
+        "optionsTr": ["Otobüsle gitmek", "Trene binmek", "Tramvaya binmek"]
       },
       {
         "de": "Es ist schneller",
         "uk": "Буде швидше",
+        "ar": "سيكون أسرع...",
+        "tr": "Daha hızlı olur...",
         "optionsDe": ["mit dem Auto", "mit der U-Bahn"],
-        "optionsUk": ["машиною", "метро"]
+        "optionsUk": ["машиною", "метро"],
+        "optionsAr": ["بالسيارة", "بالمترو"],
+        "optionsTr": ["Arabayla", "Metro ile"]
       },
       {
         "de": "Wir können auch",
         "uk": "Ми також можемо",
+        "ar": "يمكننا أيضاً...",
+        "tr": "Ayrıca yapabiliriz...",
         "optionsDe": ["zu Fuß gehen", "ein Taxi nehmen"],
-        "optionsUk": ["піти пішки", "взяти таксі"]
+        "optionsUk": ["піти пішки", "взяти таксі"],
+        "optionsAr": ["نذهب سيراً على الأقدام", "نأخذ سيارة أجرة"],
+        "optionsTr": ["Yürüyerek gitmek", "Taksiye binmek"]
       },
       {
         "de": "Mit dem Fahrrad wäre es gesünder.",
-        "uk": "На велосипеді було б корисніше."
+        "uk": "На велосипеді було б корисніше.",
+        "ar": "بالدراجة سيكون أكثر صحة.",
+        "tr": "Bisikletle gitmek daha sağlıklı olurdu."
       },
-      { "de": "Mit dem Bus ist es billiger.", "uk": "Автобусом дешевше." },
-      { "de": "Der Bus fährt direkt dahin.", "uk": "Автобус їде прямо туди." },
+      {
+        "de": "Mit dem Bus ist es billiger.",
+        "uk": "Автобусом дешевше.",
+        "ar": "بالحافلة أرخص.",
+        "tr": "Otobüsle gitmek daha ucuz."
+      },
+      {
+        "de": "Der Bus fährt direkt dahin.",
+        "uk": "Автобус їде прямо туди.",
+        "ar": "الحافلة تذهب مباشرة إلى هناك.",
+        "tr": "Otobüs doğrudan oraya gidiyor."
+      },
       {
         "de": "Mit dem Zug dauert es ungefähr eine Stunde.",
-        "uk": "Поїздом це займає приблизно годину."
+        "uk": "Поїздом це займає приблизно годину.",
+        "ar": "بالقطار يستغرق حوالي ساعة.",
+        "tr": "Trenle gitmek yaklaşık bir saat sürer."
       },
       {
         "de": "Wir könnten Fahrkarten online kaufen.",
-        "uk": "Ми могли б купити квитки онлайн."
+        "uk": "Ми могли б купити квитки онлайн.",
+        "ar": "يمكننا شراء التذاكر عبر الإنترنت.",
+        "tr": "Biletleri online alabiliriz."
       },
       {
         "de": "Der Weg zu Fuß dauert etwa 20 Minuten.",
-        "uk": "Пішки дорога займає близько 20 хвилин."
+        "uk": "Пішки дорога займає близько 20 хвилин.",
+        "ar": "المسافة سيراً على الأقدام تستغرق حوالي 20 دقيقة.",
+        "tr": "Yürüyerek gitmek yaklaşık 20 dakika sürer."
       },
       {
         "de": "Ich glaube, das Auto ist praktischer.",
-        "uk": "Думаю, машина практичніша."
+        "uk": "Думаю, машина практичніша.",
+        "ar": "أعتقد أن السيارة أكثر عملية.",
+        "tr": "Bence araba daha pratik."
       },
       {
         "de": "Mit der U-Bahn geht es am einfachsten.",
-        "uk": "Найзручніше їхати метро."
+        "uk": "Найзручніше їхати метро.",
+        "ar": "بالمترو يكون الأمر أسهل.",
+        "tr": "Metro ile gitmek en kolay yol."
       },
-      { "de": "Das Taxi ist zu teuer.", "uk": "Таксі занадто дороге." },
+      {
+        "de": "Das Taxi ist zu teuer.",
+        "uk": "Таксі занадто дороге.",
+        "ar": "سيارة الأجرة غالية جداً.",
+        "tr": "Taksi çok pahalı."
+      },
       {
         "de": "Vielleicht ist es besser, wenn wir laufen.",
-        "uk": "Можливо, краще піти пішки."
+        "uk": "Можливо, краще піти пішки.",
+        "ar": "ربما من الأفضل أن نمشي.",
+        "tr": "Belki yürümek daha iyi olur."
       }
     ],
     "8_Verabschiedung": [
-      { "de": "Tschüss!", "uk": "Бувай!" },
-      { "de": "Auf Wiedersehen!", "uk": "До побачення!" },
-      { "de": "Bis bald!", "uk": "До скорої зустрічі!" },
-      { "de": "Bis morgen!", "uk": "До завтра!" },
-      { "de": "Bis später!", "uk": "До пізніше!" },
-      { "de": "Mach’s gut!", "uk": "Щасти!" },
-      { "de": "Schönen Tag noch!", "uk": "Гарного дня!" },
-      { "de": "Schönen Abend noch!", "uk": "Гарного вечора!" },
-      { "de": "Gute Nacht!", "uk": "Надобраніч!" },
-      { "de": "Wir sehen uns am Samstag.", "uk": "Побачимось у суботу." },
-      { "de": "Wir telefonieren noch.", "uk": "Ще зателефонуємо один одному." },
-      { "de": "Dann bis nächste Woche!", "uk": "Тоді до наступного тижня!" },
-      { "de": "Viel Erfolg!", "uk": "Успіхів!" },
-      { "de": "Viel Spaß!", "uk": "Гарно повеселися!" },
-      { "de": "Pass auf dich auf!", "uk": "Бережи себе!" },
-      { "de": "Danke, gleichfalls!", "uk": "Дякую, навзаєм!" },
+      {
+        "de": "Tschüss!",
+        "uk": "Бувай!",
+        "ar": "مع السلامة!",
+        "tr": "Hoşça kal!"
+      },
+      {
+        "de": "Auf Wiedersehen!",
+        "uk": "До побачення!",
+        "ar": "إلى اللقاء!",
+        "tr": "Güle güle!"
+      },
+      {
+        "de": "Bis bald!",
+        "uk": "До скорої зустрічі!",
+        "ar": "أراك قريباً!",
+        "tr": "Yakında görüşmek üzere!"
+      },
+      {
+        "de": "Bis morgen!",
+        "uk": "До завтра!",
+        "ar": "أراك غداً!",
+        "tr": "Yarın görüşürüz!"
+      },
+      {
+        "de": "Bis später!",
+        "uk": "До пізніше!",
+        "ar": "أراك لاحقاً!",
+        "tr": "Sonra görüşürüz!"
+      },
+      {
+        "de": "Mach’s gut!",
+        "uk": "Щасти!",
+        "ar": "اعتن بنفسك!",
+        "tr": "Kendine iyi bak!"
+      },
+      {
+        "de": "Schönen Tag noch!",
+        "uk": "Гарного дня!",
+        "ar": "أتمنى لك يوماً سعيداً!",
+        "tr": "İyi günler!"
+      },
+      {
+        "de": "Schönen Abend noch!",
+        "uk": "Гарного вечора!",
+        "ar": "أتمنى لك مساءً سعيداً!",
+        "tr": "İyi akşamlar!"
+      },
+      {
+        "de": "Gute Nacht!",
+        "uk": "Надобраніч!",
+        "ar": "تصبح على خير!",
+        "tr": "İyi geceler!"
+      },
+      {
+        "de": "Wir sehen uns am Samstag.",
+        "uk": "Побачимось у суботу.",
+        "ar": "نلتقي يوم السبت.",
+        "tr": "Cumartesi görüşürüz."
+      },
+      {
+        "de": "Wir telefonieren noch.",
+        "uk": "Ще зателефонуємо один одному.",
+        "ar": "سنتصل لاحقاً.",
+        "tr": "Daha sonra telefonlaşırız."
+      },
+      {
+        "de": "Dann bis nächste Woche!",
+        "uk": "Тоді до наступного тижня!",
+        "ar": "إلى الأسبوع القادم!",
+        "tr": "Gelecek hafta görüşürüz!"
+      },
+      {
+        "de": "Viel Erfolg!",
+        "uk": "Успіхів!",
+        "ar": "أتمنى لك النجاح!",
+        "tr": "Başarılar!"
+      },
+      {
+        "de": "Viel Spaß!",
+        "uk": "Гарно повеселися!",
+        "ar": "أتمنى لك وقتاً ممتعاً!",
+        "tr": "İyi eğlenceler!"
+      },
+      {
+        "de": "Pass auf dich auf!",
+        "uk": "Бережи себе!",
+        "ar": "اعتن بنفسك!",
+        "tr": "Kendine dikkat et!"
+      },
+      {
+        "de": "Danke, gleichfalls!",
+        "uk": "Дякую, навзаєм!",
+        "ar": "شكراً، وأنت أيضاً!",
+        "tr": "Teşekkürler, sana da!"
+      },
       {
         "de": "Grüß deine Familie von mir!",
-        "uk": "Передавай привіт своїй родині!"
+        "uk": "Передавай привіт своїй родині!",
+        "ar": "بلغ تحياتي لعائلتك!",
+        "tr": "Ailene selam söyle!"
       },
       {
         "de": "Es war schön, mit dir zu sprechen.",
-        "uk": "Було приємно з тобою поговорити."
+        "uk": "Було приємно з тобою поговорити.",
+        "ar": "سعدت بالحديث معك.",
+        "tr": "Seninle konuşmak güzeldi."
       },
-      { "de": "Wir schreiben uns.", "uk": "Напишемо один одному." },
-      { "de": "Alles Gute!", "uk": "Усього найкращого!" },
-      { "de": "Bis zum nächsten Mal!", "uk": "До наступного разу!" },
+      {
+        "de": "Wir schreiben uns.",
+        "uk": "Напишемо один одному.",
+        "ar": "سنتواصل كتابياً.",
+        "tr": "Yazışırız."
+      },
+      {
+        "de": "Alles Gute!",
+        "uk": "Усього найкращого!",
+        "ar": "أتمنى لك كل خير!",
+        "tr": "Her şey gönlünce olsun!"
+      },
+      {
+        "de": "Bis zum nächsten Mal!",
+        "uk": "До наступного разу!",
+        "ar": "إلى اللقاء في المرة القادمة!",
+        "tr": "Bir dahaki sefere görüşürüz!"
+      },
       {
         "de": "Ich freue mich auf unser Treffen.",
-        "uk": "Чекаю на нашу зустріч."
+        "uk": "Чекаю на нашу зустріч.",
+        "ar": "أتطلع إلى لقائنا.",
+        "tr": "Buluşmamızı dört gözle bekliyorum."
       },
       {
         "de": "Tschüss, mach’s gut und bleib gesund!",
-        "uk": "Бувай, щасти й будь здоровий!"
+        "uk": "Бувай, щасти й будь здоровий!",
+        "ar": "مع السلامة، اعتن بنفسك وابقَ بصحة جيدة!",
+        "tr": "Hoşça kal, kendine iyi bak ve sağlıklı kal!"
       },
-      { "de": "Wir sehen uns bald wieder.", "uk": "Скоро знову побачимось." }
+      {
+        "de": "Wir sehen uns bald wieder.",
+        "uk": "Скоро знову побачимось.",
+        "ar": "سنلتقي قريباً مرة أخرى!",
+        "tr": "Yakında tekrar görüşürüz!"
+      }
     ]
   }
 }

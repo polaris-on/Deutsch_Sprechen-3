@@ -9,7 +9,10 @@ class TranslationApp {
     this.currentSection = null;
     this.currentCardIndex = 0;
     this.cardsPerSection = 5;
-    this.isGermanToUkrainian = true;
+    // Language state for content and UI
+    this.sourceLang = "de";
+    this.targetLang = "uk";
+    this.uiLang = "de"; // interface language (for i18n)
     this.currentCards = [];
     this.sectionKeys = [];
     this.showTranslation = false; // Новий стан для контролю відображення перекладу
@@ -21,12 +24,42 @@ class TranslationApp {
       cardsContainer: document.getElementById("cardsContainer"),
       directionBtn: document.getElementById("directionBtn"),
       directionText: document.querySelector(".direction-text"),
+      sourceLangSelect: document.getElementById("sourceLangSelect"),
+      targetLangSelect: document.getElementById("targetLangSelect"),
       currentSection: document.getElementById("currentSection"),
       progressCounter: document.getElementById("progressCounter"),
       nextBtn: document.getElementById("nextBtn"),
       restartBtn: document.getElementById("restartBtn"),
       totalSections: document.getElementById("totalSections"),
       cardsInSection: document.getElementById("cardsInSection"),
+    };
+
+    // UI strings for simple i18n
+    this.uiStrings = {
+      de: {
+        title: "Häufige Phrasen für Dialoge",
+        next: "Weiter",
+        restart: "Neu starten",
+        translationUnavailable: "Übersetzung nicht verfügbar",
+        sourceLabel: "Quellsprache",
+        targetLabel: "Zielsprache",
+        sectionComplete: "Abschnitt abgeschlossen",
+        nextSection: "Nächster Abschnitt",
+        sectionCompleteMessage:
+          'Abschnitt abgeschlossen. Klicken Sie auf "Weiter", um zum nächsten Abschnitt zu gelangen.',
+      },
+      uk: {
+        title: "Поширені фрази для діалогу",
+        next: "Далі",
+        restart: "Почати знову",
+        translationUnavailable: "Переклад недоступний",
+        sourceLabel: "Мова-джерело",
+        targetLabel: "Мова перекладу",
+        sectionComplete: "Розділ завершено",
+        nextSection: "Наступний розділ",
+        sectionCompleteMessage:
+          'Розділ завершено. Натисніть "Далі" для переходу до наступного розділу.',
+      },
     };
 
     this.init();
@@ -77,7 +110,7 @@ class TranslationApp {
   setupEventListeners() {
     // Кнопка зміни напрямку перекладу
     this.elements.directionBtn.addEventListener("click", () => {
-      this.toggleTranslationDirection();
+      this.swapLanguages();
     });
 
     // Кнопка "Далі"
@@ -105,6 +138,44 @@ class TranslationApp {
         this.restart();
       }
     });
+
+    // Зміна мови-джерела/цілі
+    if (this.elements.sourceLangSelect) {
+      this.elements.sourceLangSelect.value = this.sourceLang;
+      this.elements.sourceLangSelect.addEventListener("change", (e) => {
+        this.sourceLang = e.target.value;
+        if (this.sourceLang === this.targetLang) {
+          // Якщо обрані однакові, перемістити target на іншу опцію автоматично
+          const firstDifferent = Array.from(
+            this.elements.targetLangSelect.options
+          ).find((o) => o.value !== this.sourceLang);
+          if (firstDifferent)
+            this.elements.targetLangSelect.value = firstDifferent.value;
+          this.targetLang = this.elements.targetLangSelect.value;
+        }
+        this.showTranslation = false;
+        this.updateDirectionText();
+        this.displayCurrentCard();
+      });
+    }
+
+    if (this.elements.targetLangSelect) {
+      this.elements.targetLangSelect.value = this.targetLang;
+      this.elements.targetLangSelect.addEventListener("change", (e) => {
+        this.targetLang = e.target.value;
+        if (this.sourceLang === this.targetLang) {
+          const firstDifferent = Array.from(
+            this.elements.sourceLangSelect.options
+          ).find((o) => o.value !== this.targetLang);
+          if (firstDifferent)
+            this.elements.sourceLangSelect.value = firstDifferent.value;
+          this.sourceLang = this.elements.sourceLangSelect.value;
+        }
+        this.showTranslation = false;
+        this.updateDirectionText();
+        this.displayCurrentCard();
+      });
+    }
   }
 
   /**
@@ -120,6 +191,8 @@ class TranslationApp {
     this.currentCardIndex = 0;
     this.prepareCurrentSection();
     this.displayCurrentCard();
+    this.updateDirectionText();
+    this.setUITitles();
   }
 
   /**
@@ -192,22 +265,25 @@ class TranslationApp {
       return;
     }
 
-    const isGermanToUkrainian = this.isGermanToUkrainian;
-    const mainTranslation = isGermanToUkrainian ? card.uk : card.de;
-    const translationLabel = isGermanToUkrainian ? "Українська" : "Німецька";
+    // Dynamic languages
+    const mainTranslation = card[this.targetLang];
+    const translationLabel = this.getLanguageDisplayName(this.targetLang);
 
-    // Варіанти перекладу
-    const options = isGermanToUkrainian
-      ? { main: card.optionsDe || [], translation: card.optionsUk || [] }
-      : { main: card.optionsUk || [], translation: card.optionsDe || [] };
+    // Variants: attempt to find options arrays for the chosen languages, fall back to generic lists
+    const options = {
+      main: card[`options_${this.sourceLang}`] || [],
+      translation: card[`options_${this.targetLang}`] || [],
+    };
 
     // Створюємо HTML для перекладу
     const translationHTML = `
-      <div class="main-phrase ${isGermanToUkrainian ? "uk" : "de"}">
+      <div class="main-phrase lang-${this.targetLang}">
         <div class="phrase-label">${translationLabel}</div>
-        <div class="phrase-text">${mainTranslation}</div>
+        <div class="phrase-text">${
+          mainTranslation || this.uiStrings[this.uiLang].translationUnavailable
+        }</div>
       </div>
-      ${this.createOptionsHTML(options, isGermanToUkrainian)}
+      ${this.createOptionsHTML(options, this.sourceLang, this.targetLang)}
     `;
 
     // Додаємо переклад до існуючої картки
@@ -231,30 +307,26 @@ class TranslationApp {
    * Створення HTML для картки
    */
   createCardHTML(card) {
-    const isGermanToUkrainian = this.isGermanToUkrainian;
-
-    // Основні фрази
-    const mainPhrase = isGermanToUkrainian ? card.de : card.uk;
-    const mainLabel = isGermanToUkrainian ? "Німецька" : "Українська";
+    // Основна фраза від джерела
+    const mainPhrase = card[this.sourceLang];
+    const mainLabel = this.getLanguageDisplayName(this.sourceLang);
 
     return `
-            <div class="card">
-                <div class="main-phrase ${isGermanToUkrainian ? "de" : "uk"}">
-                    <div class="phrase-label">${mainLabel}</div>
-                    <div class="phrase-text">${mainPhrase}</div>
-                </div>
-            </div>
-        `;
+      <div class="card">
+        <div class="main-phrase lang-${this.sourceLang}">
+          <div class="phrase-label">${mainLabel}</div>
+          <div class="phrase-text">${mainPhrase || ""}</div>
+        </div>
+      </div>
+    `;
   }
 
   /**
    * Створення HTML для варіантів перекладу
    */
-  createOptionsHTML(options, isGermanToUkrainian) {
-    const mainLabel = isGermanToUkrainian ? "Варіанти (DE)" : "Варіанти (UK)";
-    const translationLabel = isGermanToUkrainian
-      ? "Варіанти (UK)"
-      : "Варіанти (DE)";
+  createOptionsHTML(options, sourceLang, targetLang) {
+    const mainLabel = `Варіанти (${sourceLang.toUpperCase()})`;
+    const translationLabel = `Варіанти (${targetLang.toUpperCase()})`;
 
     // Перевіряємо, чи є варіанти для відображення
     const hasMainOptions = options.main && options.main.length > 0;
@@ -314,7 +386,9 @@ class TranslationApp {
     // Перевіряємо, чи це кнопка "Наступний розділ"
     const nextBtnText =
       this.elements.nextBtn?.querySelector("span:first-child");
-    const isNextSection = nextBtnText?.textContent === "Наступний розділ";
+    const isNextSection =
+      nextBtnText?.textContent ===
+      (this.uiStrings[this.uiLang]?.nextSection || "Наступний розділ");
 
     if (isNextSection) {
       // Якщо це перехід до наступного розділу
@@ -364,20 +438,24 @@ class TranslationApp {
     this.elements.loadingMessage.style.display = "none";
     this.elements.errorMessage.style.display = "none";
 
+    const title =
+      this.uiStrings[this.uiLang]?.sectionComplete || "Section complete";
+    const message = isLastSection
+      ? this.uiStrings[this.uiLang]?.sectionEndMessage ||
+        this.uiStrings[this.uiLang]?.sectionCompleteMessage ||
+        "Congratulations — you finished all sections."
+      : this.uiStrings[this.uiLang]?.sectionCompleteMessage ||
+        this.uiStrings[this.uiLang]?.sectionComplete ||
+        "Section complete.";
+
     this.elements.cardsContainer.innerHTML = `
-            <div class="card appear">
-                <div class="main-phrase" style="text-align: center;">
-                    <div class="phrase-label">Розділ завершено</div>
-                    <div class="phrase-text">
-                        ${
-                          isLastSection
-                            ? "Вітаємо! Ви завершили всі розділи."
-                            : "Розділ завершено. Натисніть 'Далі' для переходу до наступного розділу."
-                        }
-                    </div>
-                </div>
-            </div>
-        `;
+      <div class="card appear">
+        <div class="main-phrase" style="text-align: center;">
+          <div class="phrase-label">${title}</div>
+          <div class="phrase-text">${message}</div>
+        </div>
+      </div>
+    `;
 
     if (isLastSection) {
       this.elements.nextBtn.style.display = "none";
@@ -393,7 +471,10 @@ class TranslationApp {
       const nextBtnText =
         this.elements.nextBtn.querySelector("span:first-child");
       if (nextBtnText) {
-        nextBtnText.textContent = "Наступний розділ";
+        nextBtnText.textContent =
+          this.uiStrings[this.uiLang]?.nextSection ||
+          this.uiStrings[this.uiLang]?.next ||
+          "Next";
       }
     }
 
@@ -416,7 +497,7 @@ class TranslationApp {
     // Повертаємо текст кнопки до нормального стану
     const nextBtnText = this.elements.nextBtn.querySelector("span:first-child");
     if (nextBtnText) {
-      nextBtnText.textContent = "Далі";
+      nextBtnText.textContent = this.uiStrings[this.uiLang]?.next || "Next";
     }
   }
 
@@ -424,36 +505,8 @@ class TranslationApp {
    * Перемикання напрямку перекладу
    */
   toggleTranslationDirection() {
-    this.isGermanToUkrainian = !this.isGermanToUkrainian;
-
-    // Оновлюємо текст кнопки
-    this.elements.directionText.textContent = this.isGermanToUkrainian
-      ? "DE → UK"
-      : "UK → DE";
-
-    // Скидаємо стан перекладу при зміні напрямку
-    this.showTranslation = false;
-
-    // Оновлюємо поточну картку
-    if (this.currentCardIndex < this.currentCards.length) {
-      // Видаляємо переклад, якщо він був показаний
-      const currentCard = this.elements.cardsContainer?.querySelector(".card");
-      if (currentCard) {
-        // Видаляємо всі елементи крім першої фрази
-        const firstPhrase = currentCard.querySelector(".main-phrase");
-        const allPhrases = currentCard.querySelectorAll(".main-phrase");
-        const optionsContainer =
-          currentCard.querySelector(".options-container");
-
-        // Видаляємо всі елементи після першої фрази
-        allPhrases.forEach((phrase, index) => {
-          if (index > 0) phrase.remove();
-        });
-        if (optionsContainer) optionsContainer.remove();
-      }
-
-      this.displayCurrentCard();
-    }
+    // kept for backward compatibility: call swapLanguages
+    this.swapLanguages();
   }
 
   /**
@@ -474,7 +527,7 @@ class TranslationApp {
     // Повертаємо текст кнопки до нормального стану
     const nextBtnText = this.elements.nextBtn.querySelector("span:first-child");
     if (nextBtnText) {
-      nextBtnText.textContent = "Далі";
+      nextBtnText.textContent = this.uiStrings[this.uiLang]?.next || "Next";
     }
   }
 
@@ -486,6 +539,67 @@ class TranslationApp {
     const sectionName = this.getSectionDisplayName(sectionKey);
     this.elements.currentSection.textContent = sectionName;
     this.elements.cardsInSection.textContent = this.currentCards.length;
+  }
+
+  getLanguageDisplayName(code) {
+    const map = {
+      de: "Deutsch",
+      uk: "Українська",
+      ar: "العربية",
+      tr: "Türkçe",
+      en: "English",
+      vi: "Tiếng Việt",
+      es: "Español",
+      bg: "Български",
+    };
+    return map[code] || code.toUpperCase();
+  }
+
+  updateDirectionText() {
+    if (this.elements.directionText) {
+      const src = this.sourceLang.toUpperCase();
+      const tgt = this.targetLang.toUpperCase();
+      this.elements.directionText.textContent = `${src} → ${tgt}`;
+    }
+  }
+
+  swapLanguages() {
+    const tmp = this.sourceLang;
+    this.sourceLang = this.targetLang;
+    this.targetLang = tmp;
+    // update selects if present
+    if (this.elements.sourceLangSelect)
+      this.elements.sourceLangSelect.value = this.sourceLang;
+    if (this.elements.targetLangSelect)
+      this.elements.targetLangSelect.value = this.targetLang;
+    this.showTranslation = false;
+    this.updateDirectionText();
+    this.displayCurrentCard();
+  }
+
+  setUITitles() {
+    // set header title according to uiLang
+    try {
+      const header = document.querySelector(".app-header h1");
+      if (
+        header &&
+        this.uiStrings[this.uiLang] &&
+        this.uiStrings[this.uiLang].title
+      ) {
+        header.textContent = this.uiStrings[this.uiLang].title;
+      }
+      // next button text
+      const nextBtnText =
+        this.elements.nextBtn.querySelector("span:first-child");
+      if (nextBtnText)
+        nextBtnText.textContent = this.uiStrings[this.uiLang].next;
+      const restartBtnText =
+        this.elements.restartBtn.querySelector("span:first-child");
+      if (restartBtnText)
+        restartBtnText.textContent = this.uiStrings[this.uiLang].restart;
+    } catch (e) {
+      // ignore if elements not present yet
+    }
   }
 
   /**
@@ -536,7 +650,7 @@ class TranslationApp {
    * Показ повідомлення про помилку
    */
   showError(
-    message = "Помилка завантаження даних. Перевірте наявність файлу data.json"
+    message = "Fehler beim Laden der Daten. Bitte prüfen Sie die Datei data.json"
   ) {
     this.elements.loadingMessage.style.display = "none";
     this.elements.errorMessage.style.display = "block";
@@ -559,7 +673,7 @@ document.addEventListener("DOMContentLoaded", () => {
     );
     document.getElementById("loadingMessage").innerHTML = `
             <div class="error-message">
-                <p>Ваш браузер не підтримує сучасні веб-технології. Будь ласка, оновіть браузер.</p>
+                <p>Ihr Browser unterstützt Fetch API nicht. Bitte aktualisieren Sie Ihren Browser.</p>
             </div>
         `;
     return;

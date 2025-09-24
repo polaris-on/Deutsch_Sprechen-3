@@ -12,20 +12,43 @@
     <div class="app-container">
         <!-- Заголовок програми -->
         <header class="app-header">
-            <h1>Поширені фрази для діалогу</h1>
+            <h1>Häufige Phrasen für Dialoge</h1>
         </header>
 
         <!-- Панель контролю -->
         <div class="control-panel">
-            <div class="direction-control">
-                <button id="directionBtn" class="direction-btn" aria-label="Змінити напрямок перекладу">
-                    <span class="direction-arrow">⇄</span>
-                    <span class="direction-text">DE → UK</span>
-                </button>
-            </div>
+            <div class="lang-panel">
+                <label for="sourceLangSelect" class="visually-hidden">Quellsprache auswählen</label>
+                <select id="sourceLangSelect" title="Quellsprache auswählen">
+                    <option value="de">DE (Deutsch)</option>
+                    <option value="uk">UK (Ukrainisch)</option>
+                    <option value="ar">AR (Arabisch)</option>
+                    <option value="tr">TR (Türkisch)</option>
+                    <option value="en">EN (Englisch)</option>
+                    <option value="vi">VI (Vietnamesisch)</option>
+                    <option value="es">ES (Spanisch)</option>
+                    <option value="bg">BG (Bulgarisch)</option>
+                </select>
 
+                <button id="directionBtn" class="direction-btn" aria-label="Поміняти місцями мови"
+                    title="Поміняти місцями мови">
+                    <span class="direction-arrow">⇄</span>
+                </button>
+
+                <label for="targetLangSelect" class="visually-hidden">Zielsprache auswählen</label>
+                <select id="targetLangSelect" title="Zielsprache auswählen">
+                    <option value="uk">UK (Ukrainisch)</option>
+                    <option value="de">DE (Deutsch)</option>
+                    <option value="ar">AR (Arabisch)</option>
+                    <option value="tr">TR (Türkisch)</option>
+                    <option value="en">EN (Englisch)</option>
+                    <option value="vi">VI (Vietnamesisch)</option>
+                    <option value="es">ES (Spanisch)</option>
+                    <option value="bg">BG (Bulgarisch)</option>
+                </select>
+            </div>
             <div class="progress-info">
-                <span id="currentSection">Завантаження...</span>
+                <span id="currentSection">Lädt...</span>
                 <span id="progressCounter">0 / 0</span>
             </div>
         </div>
@@ -34,24 +57,24 @@
         <main id="cardsContainer" class="cards-container">
             <div id="loadingMessage" class="loading-message">
                 <div class="spinner"></div>
-                <p>Завантаження даних...</p>
+                <p>Daten werden geladen...</p>
             </div>
 
             <div id="errorMessage" class="error-message" style="display: none;">
-                <p>Помилка завантаження даних. Перевірте наявність файлу data.json</p>
-                <button onclick="location.reload()" class="retry-btn">Спробувати знову</button>
+                <p>Fehler beim Laden der Daten. Bitte prüfen Sie die Datei data.json</p>
+                <button onclick="location.reload()" class="retry-btn">Erneut versuchen</button>
             </div>
         </main>
 
         <!-- Навігація -->
         <nav class="navigation">
             <button id="nextBtn" class="nav-btn next-btn" disabled>
-                <span>Далі</span>
+                <span>Weiter</span>
                 <span class="nav-arrow">→</span>
             </button>
 
             <button id="restartBtn" class="nav-btn restart-btn" style="display: none;">
-                <span>Почати знову</span>
+                <span>Neu starten</span>
                 <span class="restart-icon">↻</span>
             </button>
         </nav>
@@ -59,8 +82,8 @@
         <!-- Інформація про розділи -->
         <footer class="app-footer">
             <div class="sections-info">
-                <span>Доступно розділів: <span id="totalSections">0</span></span>
-                <span>Карток у розділі: <span id="cardsInSection">0</span></span>
+                <span>Verfügbare Abschnitte: <span id="totalSections">0</span></span>
+                <span>Karten pro Abschnitt: <span id="cardsInSection">0</span></span>
             </div>
         </footer>
     </div>

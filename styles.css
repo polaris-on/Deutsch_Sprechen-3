@@ -1,3 +1,72 @@
+/* Доступність: приховати елементи з класом visually-hidden */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  border: 0 !important;
+  white-space: nowrap !important;
+}
+/* Компактна панель вибору мов */
+.lang-panel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0;
+}
+
+.lang-panel select {
+  padding: 4px 10px;
+  font-size: 1rem;
+  font-family: var(--font-family);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background: var(--card-background);
+  color: var(--text-primary);
+  min-width: 44px;
+  max-width: 60px;
+  box-shadow: none;
+  transition: var(--transition);
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+}
+.lang-panel select:focus {
+  border-color: var(--primary-color);
+}
+.lang-panel select:hover {
+  border-color: var(--accent-color);
+  background: #eef6ff;
+}
+.lang-panel option {
+  font-size: 1rem;
+  padding: 2px 8px;
+}
+
+#directionBtn.direction-btn {
+  padding: 4px 8px;
+  min-width: 0;
+  font-size: 1rem;
+  border-radius: 50px;
+  background: var(--card-background);
+  border: 1px solid var(--border-color);
+  box-shadow: none;
+  color: var(--primary-color);
+  transition: var(--transition);
+  margin: 0 2px;
+}
+#directionBtn.direction-btn:hover {
+  border-color: var(--primary-color);
+  background: #eef6ff;
+}
+.direction-arrow {
+  font-size: 1.15rem;
+  color: var(--primary-color);
+  margin: 0 2px;
+}
 /* CSS змінні для кольорів та розмірів */
 :root {
   --primary-color: #667eea;
@@ -83,9 +152,75 @@ body {
   flex-shrink: 0;
 }
 
+/* Назва розділу — виділена, велика, градієнтний текст */
+#currentSection {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+  background: linear-gradient(
+    135deg,
+    var(--primary-color),
+    var(--accent-color)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  letter-spacing: 0.5px;
+  transition: var(--transition);
+}
+
 .direction-control {
   display: flex;
   align-items: center;
+}
+
+/* Компактна кнопка перемикання мов */
+#directionBtn.direction-btn {
+  padding: 6px 10px;
+  min-width: 0;
+  font-size: 0.95rem;
+  border-radius: 50px;
+  gap: 6px;
+  box-shadow: var(--shadow-light);
+  background: var(--card-background);
+}
+.direction-arrow {
+  font-size: 1.1rem;
+  color: var(--primary-color);
+  margin: 0 2px;
+}
+/* Стилі для select-елементів */
+.lang-selects select {
+  padding: 8px 18px;
+  font-size: 1rem;
+  font-family: var(--font-family);
+  border: 1.5px solid var(--primary-color);
+  border-radius: var(--border-radius-small);
+  background: var(--background-color);
+  color: var(--text-primary);
+  margin: 0 6px;
+  box-shadow: var(--shadow-light);
+  transition: var(--transition);
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+}
+.lang-selects select:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 2px var(--accent-color);
+}
+.lang-selects select:hover {
+  border-color: var(--secondary-color);
+  background: #eef6ff;
+}
+.lang-selects label.visually-hidden {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
 }
 
 .direction-btn {
@@ -136,7 +271,7 @@ body {
   flex: 1;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   margin-bottom: 15px;
   overflow-y: auto;
 }
