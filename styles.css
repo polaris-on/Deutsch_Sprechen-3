@@ -762,6 +762,12 @@ button:focus {
   justify-content: center;
   padding: 0;
 }
+/* @media (max-width: 768px) {
+  .speak-btn {
+    display: none;
+  } */
+}
+
 .speak-btn:hover,
 .speak-btn:focus {
   background: linear-gradient(135deg, #bbdefb 0%, #e3f2fd 100%);

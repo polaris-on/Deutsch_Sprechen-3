@@ -196,13 +196,17 @@ class TranslationApp {
 
   /**
    * Підготовка поточного розділу
+   * Тепер вибір карток випадковий
    */
   prepareCurrentSection() {
     const sectionKey = this.sectionKeys[this.currentSection];
     const sectionData = this.data.SprechenTeil3[sectionKey];
 
+    // Перемішуємо картки у розділі
+    const shuffled = sectionData.slice().sort(() => Math.random() - 0.5);
+
     // Беремо максимум 5 карток з поточного розділу
-    this.currentCards = sectionData.slice(0, this.cardsPerSection);
+    this.currentCards = shuffled.slice(0, this.cardsPerSection);
     this.currentCardIndex = 0;
     this.showTranslation = false; // Скидаємо стан перекладу для нового розділу
 
